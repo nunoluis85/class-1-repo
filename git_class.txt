@@ -1,0 +1,121 @@
+Git commands
+
+git status
+
+The git status command displays the state of the working directory and the staging
+area. It lets you see which changes have been staged, which haven't, and which files
+aren't being tracked by Git. Status output does not show you any information
+regarding the committed project history.
+
+git add
+
+The git add command adds a change in the working directory to the staging area.
+It tells Git that you want to include updates to a particular file in the next commit.
+However, git add doesn't really affect the repository in any significant way—changes
+are not actually recorded until you run git commit .
+
+git diff
+
+Diff command is used in git to track the difference between the changes made on a file.
+Since Git is a version control system, tracking changes are something very vital to it.
+Diff command takes two inputs and reflects the differences between them. It is not
+necessary that these inputs are files only.
+
+git commit -m ""
+
+The git commit command will save all staged changes, along with a brief description
+from the user, in a “commit” to the local repository. Commits are at the heart of Git usage.
+You can think of a commit as a snapshot of your project, where a new version of
+that project is created in the current repository.
+
+git push
+
+The git push command is used to upload local repository content to a remote repository.
+Pushing is how you transfer commits from your local repository to a remote repo.
+It's the counterpart to git fetch , but whereas fetching imports commits to local branches,
+pushing exports commits to remote branches.
+
+git fetch
+
+The git fetch command downloads commits, files, and refs from a remote repository
+into your local repo. Fetching is what you do when you want to see what everybody
+else has been working on.
+
+git pull
+
+The git pull command is used to fetch and download content from a remote repository
+and immediately update the local repository to match that content. Merging remote
+upstream changes into your local repository is a common task in Git-based
+collaboration work flows.
+
+git init (or git init -b master to also set the main branch)
+
+The git init command creates a new Git repository. It can be used to convert an existing,
+unversioned project to a Git repository or initialize a new, empty repository.
+Most other Git commands are not available outside of an initialized repository,
+so this is usually the first command you'll run in a new project.
+
+git remote -v
+/see what is your local repo connected to
+
+git remote add origin "the url"
+
+git remote remove origin
+/where the origin is the name of your remote you can see when you run git remote -v/
+
+Cloning and forking
+
+Forking is a concept while cloning is a process. Forking is just containing a
+separate copy of the repository and there is no command involved. Cloning is done
+through the command 'git clone' and it is a process of receiving all the code
+files to the local machine.
+
+A fork is a copy of a repository that allows you to freely experiment with changes
+without affecting the original project. A forked repository differs from a clone
+in that a connection exists between your fork and the original repository itself.
+In this way, your fork acts as a bridge between the original repository and your
+personal copy where you can contribute back to the original project using a pull
+request
+
+When you create a new repository on GitHub, it exists as a remote location where
+your project is stored. You can clone your repository to create a local copy on
+your computer so that you can sync between both the local and remote locations of
+the project.
+
+Unlike forking, you won’t be able to pull down changes from the original repository
+you cloned from, and if the project is owned by someone else you won’t be able to
+contribute back to it unless you are specifically invited as a collaborator.
+Cloning is ideal for instances when you need a way to quickly get your own copy
+of a repository where you may not be contributing to the original project.
+
+Cloning a Git Repo without Fork
+Cloning is a three steps process:
+* 		Step 1: Clone a Repository: The user starts from the upstream repository on
+              GitHub. Since the user navigated to the repository because he/she
+              is interested in the concept and they like to contribute.
+              This process starts from cloning when they clone the repository it
+              into their local machine. Now they have the exact copy of the project
+              files on their system to make the changes.
+* 		Step 2: Make the desired changes: After cloning, contributors provide
+              their contribution to the repository. Contribution in the form of
+              editing the source files resulting in either a bug fix or adding
+              functionality or maybe optimizing the code. In this step, a contributor
+              can apply a single commit or multiple commits to the repository.
+              But the bottom line is, everything happens on their local system.
+* 		Step 3: Pushing the Changes: Once the changes or commits are done and now
+              the modifications can be pushed to the upstream repository. *
+
+
+Cloning a Git Repo after Forking
+Forking a Repository is a five steps process but three steps are exactly the same as cloning.
+Only the first and the last forking step differs from cloning.
+1. Step 1: Fork a Repository: Again the user starts from the upstream repository on
+           GitHub but this process starts from forking when they fork a repository to their
+           own GitHub account.
+2. Step 2: Clone a Repository: Same as cloning.
+3. Step 3: Make the desired changes: Same as cloning.
+4. Step 4: Pushing the Changes: Same as cloning.
+5. Step 5: Send changes to Original Repository: This process is called Pull Request in Git.
+           It is done on github.
+           At this step, the user sends the changes to the owner of the repository
+           as a request to merge the changes to the main central repository .
